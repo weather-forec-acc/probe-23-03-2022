@@ -8,8 +8,10 @@ const getCurrentTimeDate = () => {
     var month = new Array('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec');
     var hours = currentTimeDate.getHours();
     var minutes = currentTimeDate.getMinutes();
+    var seconds = currentTimeDate.getSeconds();
     minutes = minutes < 10 ? '0' + minutes: minutes;
-    var currentTime = `${hours}:${minutes}`;
+    seconds = seconds < 10 ? '0' + seconds: seconds;
+    var currentTime = `${hours}:${minutes}:${seconds}`;
     var currentDay = weekday[currentTimeDate.getDay()];
     var currentDate = currentTimeDate.getDate();
     var currentMonth = month[currentTimeDate.getMonth()];
